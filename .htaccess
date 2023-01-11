@@ -1,3 +1,30 @@
+# BEGIN SecuPress readme_discloses
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /portfolio-wordpress/
+    RewriteRule ^portfolio-wordpress/(.*/)?(readme|changelog|debug)\.(txt|md|html|log)$ - [R=404,L,NC]
+</IfModule>
+# END SecuPress
+
+# BEGIN SecuPress wp_version
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /portfolio-wordpress/
+    RewriteRule ^portfolio-wordpress/readme\.html$ - [R=404,L,NC]
+</IfModule>
+# END SecuPress
+
+# BEGIN SecuPress no_x_powered_by
+<IfModule mod_headers.c>
+    Header unset X-Powered-By
+</IfModule>
+# END SecuPress
+
+# BEGIN SecuPress directory_listing
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+# END SecuPress
 
 # BEGIN WordPress
 # Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
